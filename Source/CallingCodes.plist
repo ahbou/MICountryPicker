@@ -4,6 +4,14 @@
 <array>
 	<dict>
 		<key>code</key>
+		<string>AC</string>
+		<key>dial_code</key>
+		<string>+247</string>
+		<key>name</key>
+		<string>Ascension Island</string>
+	</dict>
+	<dict>
+		<key>code</key>
 		<string>AF</string>
 		<key>dial_code</key>
 		<string>+93</string>
@@ -424,7 +432,7 @@
 		<key>dial_code</key>
 		<string>+225</string>
 		<key>name</key>
-		<string>Cote d'Ivoire</string>
+		<string>Cote d&apos;Ivoire</string>
 	</dict>
 	<dict>
 		<key>code</key>
@@ -904,7 +912,7 @@
 		<key>dial_code</key>
 		<string>+850</string>
 		<key>name</key>
-		<string>Korea, Democratic People's Republic of Korea</string>
+		<string>Korea, Democratic People&apos;s Republic of Korea</string>
 	</dict>
 	<dict>
 		<key>code</key>
