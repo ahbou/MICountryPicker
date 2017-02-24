@@ -54,7 +54,7 @@ open class MICountryPicker: UITableViewController {
             let displayName = (locale as NSLocale).displayName(forKey: NSLocale.Key.countryCode, value: countryCode)
             let countryData = CallingCodes.filter { $0["code"] == countryCode }
             let country: MICountry
-
+            
             if countryData.count > 0, let dialCode = countryData[0]["dial_code"] {
                 country = MICountry(name: displayName!, code: countryCode, dialCode: dialCode)
             } else {

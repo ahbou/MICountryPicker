@@ -314,6 +314,14 @@
 		<key>name</key>
 		<string>Canada</string>
 	</dict>
+    <dict>
+        <key>code</key>
+        <string>IC</string>
+        <key>dial_code</key>
+        <string>+34</string>
+        <key>name</key>
+        <string>Canary Islands</string>
+    </dict>
 	<dict>
 		<key>code</key>
 		<string>CV</string>

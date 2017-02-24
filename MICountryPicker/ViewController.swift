@@ -23,13 +23,13 @@ class ViewController: UIViewController {
         }
         
         // Optional: To pick from custom countries list
-        picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
+     //   picker.customCountriesCode = ["EG", "US", "AF", "AQ", "AX"]
         
         // delegate
         picker.delegate = self
 
         // Display calling codes
-//        picker.showCallingCodes = true
+        picker.showCallingCodes = true
 
         // or closure
         picker.didSelectCountryClosure = { name, code in
