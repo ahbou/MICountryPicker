@@ -204,10 +204,7 @@ extension MICountryPicker {
         }
         return ""
     }
-    
-    override open func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        return collation.sectionIndexTitles
-    }
+
     
     override open func tableView(_ tableView: UITableView,
         sectionForSectionIndexTitle title: String,
