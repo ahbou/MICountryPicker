@@ -106,7 +106,7 @@ open class MICountryPicker: UITableViewController {
     open var didSelectCountryClosure: ((String, String) -> ())?
     open var didSelectCountryWithCallingCodeClosure: ((String, String, String) -> ())?
     open var showCallingCodes = false
-    open var showSearchBar = false
+    open var showSearchBar = true
 
     convenience public init(completionHandler: @escaping ((String, String) -> ())) {
         self.init()
@@ -242,7 +242,7 @@ extension MICountryPicker {
 extension MICountryPicker: UISearchResultsUpdating {
     
     public func updateSearchResults(for searchController: UISearchController) {
-        filter(searchController.searchBar.text!)
+       _ =  filter(searchController.searchBar.text!)
         tableView.reloadData()
     }
 }
