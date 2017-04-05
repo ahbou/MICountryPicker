@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         picker.showCallingCodes = true
         
         // Show SearchBar
-        picker.showSearchBar = false
+        // picker.showSearchBar = false
 
         // or closure
         picker.didSelectCountryClosure = { name, code in
