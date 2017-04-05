@@ -13,11 +13,11 @@ it simply add the following line to your Podfile:
     
     # Swift 3
     use_frameworks!
-    pod 'MICountryPicker', :git => 'https://github.com/n1rocket/MICountryPicker.git', :branch => 'master'
+    pod 'MICountryPicker', :git => 'https://github.com/ahbou/MICountryPicker.git', :branch => 'master'
     
     # Swift 2
     use_frameworks!
-    pod 'MICountryPicker', :git => 'https://github.com/n1rocket/MICountryPicker.git', :branch => 'swift-2'
+    pod 'MICountryPicker', :git => 'https://github.com/ahbou/MICountryPicker.git', :branch => 'swift-2'
 
 Show MICountryPicker from UIViewController
 
