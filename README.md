@@ -4,7 +4,7 @@ MICountryPicker is a country picker controller for iOS8+ with an option to searc
 
 ## Screenshots
 
-![alt tag](https://github.com/mustafaibrahim989/MICountryPicker/blob/master/screen1.png) ![alt tag](https://github.com/mustafaibrahim989/MICountryPicker/blob/master/screen2.png) ![alt tag](https://github.com/mustafaibrahim989/MICountryPicker/blob/master/screen3.png)
+![alt tag](https://github.com/n1rocket/MICountryPicker/blob/master/screen1.png) ![alt tag](https://github.com/n1rocket/MICountryPicker/blob/master/screen2.png) ![alt tag](https://github.com/n1rocket/MICountryPicker/blob/master/screen3.png)
 
 ## Installation
 
@@ -13,11 +13,11 @@ it simply add the following line to your Podfile:
     
     # Swift 3
     use_frameworks!
-    pod 'MICountryPicker', :git => 'https://github.com/mustafaibrahim989/MICountryPicker.git', :branch => 'master'
+    pod 'MICountryPicker', :git => 'https://github.com/n1rocket/MICountryPicker.git', :branch => 'master'
     
     # Swift 2
     use_frameworks!
-    pod 'MICountryPicker', :git => 'https://github.com/mustafaibrahim989/MICountryPicker.git', :branch => 'swift-2'
+    pod 'MICountryPicker', :git => 'https://github.com/n1rocket/MICountryPicker.git', :branch => 'swift-2'
 
 Show MICountryPicker from UIViewController
 
@@ -37,6 +37,9 @@ picker.delegate = self
 // Optionally, set this to display the country calling codes after the names
 picker.showCallingCodes = true
 
+// Show SearchBar
+        picker.showSearchBar = false
+        
 ```
 
 ```swift

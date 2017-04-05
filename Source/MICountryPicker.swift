@@ -106,6 +106,7 @@ open class MICountryPicker: UITableViewController {
     open var didSelectCountryClosure: ((String, String) -> ())?
     open var didSelectCountryWithCallingCodeClosure: ((String, String, String) -> ())?
     open var showCallingCodes = false
+    open var showSearchBar = false
 
     convenience public init(completionHandler: @escaping ((String, String) -> ())) {
         self.init()
@@ -116,7 +117,9 @@ open class MICountryPicker: UITableViewController {
         super.viewDidLoad()
         
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
-        createSearchBar()
+        if showSearchBar{
+            createSearchBar()
+        }
         tableView.reloadData()
         
         definesPresentationContext = true
@@ -156,14 +159,14 @@ open class MICountryPicker: UITableViewController {
 extension MICountryPicker {
     
     override open func numberOfSections(in tableView: UITableView) -> Int {
-        if searchController.searchBar.text!.characters.count > 0 {
+        if showSearchBar && searchController.searchBar.text!.characters.count > 0 {
             return 1
         }
         return sections.count
     }
     
     override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if searchController.searchBar.text!.characters.count > 0 {
+        if showSearchBar && searchController.searchBar.text!.characters.count > 0 {
             return filteredList.count
         }
         return sections[section].countries.count
@@ -180,7 +183,7 @@ extension MICountryPicker {
         let cell: UITableViewCell! = tempCell
         
         let country: MICountry!
-        if searchController.searchBar.text!.characters.count > 0 {
+        if showSearchBar && searchController.searchBar.text!.characters.count > 0 {
             country = filteredList[(indexPath as NSIndexPath).row]
         } else {
             country = sections[(indexPath as NSIndexPath).section].countries[(indexPath as NSIndexPath).row]
@@ -221,7 +224,7 @@ extension MICountryPicker {
     override open func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let country: MICountry!
-        if searchController.searchBar.text!.characters.count > 0 {
+        if showSearchBar && searchController.searchBar.text!.characters.count > 0 {
             country = filteredList[(indexPath as NSIndexPath).row]
         } else {
             country = sections[(indexPath as NSIndexPath).section].countries[(indexPath as NSIndexPath).row]
